@@ -932,7 +932,7 @@ En particular, te recomendamos ver leer este
 La base de datos recomendada para tu aplicación es PostgreSQL. Te
 recomendamos usar [vercel PostgreSQL](https://vercel.com/docs/storage/vercel-postgres)
 para que no tengas que instalar PostgreSQL en tu computadora.
-
+ 
 Para crear una base de datos PostgreSQL en Vercel usa la
 [documentación oficial](https://vercel.com/docs/storage/vercel-postgres/quickstart).
 Identifica la siguiente información porque la necesitarás para
