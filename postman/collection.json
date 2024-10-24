@@ -249,7 +249,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"/trajectories/{{taxiId}}?date={{date}} responds with 404 if taxi id not found\", () => {",
+									"pm.test(\"/trajectories?taxiId={{taxiId}}?date={{date}} responds with 404 if taxi id not found\", () => {",
 									"    pm.expect(pm.response.code).to.eq(404);",
 									"});",
 									""
@@ -346,7 +346,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"/trajectories/ responds with 400 for missing required parameters (date)\", () => {",
+									"pm.test(\"/trajectories?taxiId={{taxiId}} responds with 400 for missing required parameters (date)\", () => {",
 									"     pm.expect(pm.response.code).to.eq(400);",
 									"});",
 									""
@@ -386,7 +386,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"/trajectories/ responds with 400 for missing required parameters (taxiId)\", () => {",
+									"pm.test(\"/trajectories?date={{date}} responds with 400 for missing required parameters (taxiId)\", () => {",
 									"     pm.expect(pm.response.code).to.eq(400);",
 									"});",
 									""
@@ -475,7 +475,7 @@
 									"    pm.expect(pm.response.code).to.eq(200);",
 									"});",
 									"",
-									"pm.test(\"/trajectories/latest endpoint responds with an array of trajectory id, latitiude, longiture, plate, timestamp\", () => {",
+									"pm.test(\"/trajectories/latest endpoint responds with an array of taxiId id, latitiude, longiture, plate, timestamp\", () => {",
 									"    const trajectories = pm.response.json();",
 									"    pm.expect(trajectories[0]).to.haveOwnProperty('taxiId');",
 									"    pm.expect(trajectories[0]).to.haveOwnProperty('plate');",
