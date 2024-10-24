@@ -14,7 +14,6 @@ db.init_app(app)
 def hello_world():
     return 'Hello world DB!'
 
-
 @app.route('/taxis', methods=['GET'])
 def taxis():
     return get_taxis()
